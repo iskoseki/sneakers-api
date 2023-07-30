@@ -1,4 +1,4 @@
-#Snk! The Free Sneakers collection API  [![Build Status](https://travis-ci.org/statickidz/node-google-translate-skidz.svg?branch=master)](https://travis-ci.org/statickidz/node-google-translate-skidz)
+#Snk! The Free Sneakers collection API  [![Build Status](https://github.com/kosekijsx/sneakers-api)
 
 ## Install
 
