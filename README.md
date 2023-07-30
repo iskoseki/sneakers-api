@@ -1,4 +1,4 @@
-# Snk! The Free Sneakers collection API  [![Build Status](https://github.com/kosekijsx/sneakers-api)
+# Snk! The Free Sneakers collection API  [![Build Status](https://github.com/kosekijsx/sneakers-api)]
 
 ## Install
 
