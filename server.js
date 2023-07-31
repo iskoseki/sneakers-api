@@ -3,7 +3,7 @@ require('dotenv').config() // set config .env variable
 const express = require('express')
 const mongoose = require('mongoose')
 const app = require('./src/app')
-const port = process.env.PORT || 3000 // default port
+const PORT = process.env.PORT || 3000 // default port
 const routes = require('./src/routes/routes')
 
 // Mongoose configuration
@@ -13,8 +13,11 @@ mongoose
   .then(() => console.log('--- ✅ Database connection established ---'))
   .catch(() => console.log('--- ❌ Database connection rejected ---'))
 
+app.set('view engine', 'pug')
+// eslint-disable-next-line n/no-path-concat
+app.set('views', 'src/views')
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use('/api', routes)
 
-app.listen(port, () => console.log('listening on port'))
+app.listen(PORT, () => console.log('Server listening on port ' + PORT))
