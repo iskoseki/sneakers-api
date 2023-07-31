@@ -7,12 +7,10 @@ process.on('uncaughtException', function (err) {
 })
 
 // 👷🏼‍♀️ GET /home
-
 router.get('/', function (req, res, err) {
-  res.render('index', {
-    message: 'Search Hacker News'
-  })
+  res.render('index', { title: 'pug-Bootstrap' })
 })
+
 // ✅ GET method /products
 router.get('/products', async (req, res, err) => {
   try {
@@ -24,6 +22,7 @@ router.get('/products', async (req, res, err) => {
     res.status(500).json({ message: error.message })
   }
 })
+
 // ✅ GET /products/:id
 router.get('/products/:id', async (req, res, err) => {
   try {
