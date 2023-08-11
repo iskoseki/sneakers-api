@@ -26,3 +26,6 @@ app.use('/api', routes)
 
 // Server up and running
 app.listen(PORT, () => console.log('Server listening on port ' + PORT))
+
+// Export the Express API
+module.exports = app
