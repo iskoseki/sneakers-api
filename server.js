@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 app.use('/public', express.static('public')) // serve static files in public subdirectory under /public virtual path
-app.use('/api', routes)
+app.use('/', routes)
 
 // Server up and running
 app.listen(PORT, () => console.log('Server listening on port ' + PORT))
