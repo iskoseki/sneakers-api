@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 const app = require("./src/app");
 const routes = require("./src/routes/routes");
 const cookieParser = require("cookie-parser");
-const { error } = require("console");
 const PORT = process.env.PORT || 3000; // default port
 // Mongoose configuration
 mongoose.set("strictQuery", false);
