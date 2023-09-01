@@ -6,10 +6,10 @@ const app = require("./src/app");
 const routes = require("./src/routes/routes");
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3000; // default port
-const DBConection = require("./src/config/Mongodb");
-//DB connection
-DBConection();
+const MongoConnection = require("./src/config/Mongodb");
 
+// Mongoose configuration and connection
+MongoConnection();
 // VIEW SETTINGS
 app.set("views", path.join(__dirname, "./src/public/views")); // use pug templates file in /public/views subdirectory
 app.set("view engine", "pug");

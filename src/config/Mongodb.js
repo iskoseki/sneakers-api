@@ -1,19 +1,14 @@
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
+//DB connection
 
-const DBConection = async () => {
-  // Mongoose configuration
+function MongoConnection() {
   mongoose
     .connect(process.env.URL_DB)
-    .then(() =>
-      console.log(
-        `--- ✅ Database connection established ${conn.connection.host} ---`
-      )
-    )
-    .catch(
-      (error) => console.log("--- ❌ Database connection rejected ---", error),
-      process.exit(1)
+    .then(() => console.log(`--- ✅ Database connection established ---`))
+    .catch((error) =>
+      console.log("--- ❌ Database connection rejected ---", error)
     );
-};
+}
 
-module.exports = DBConection;
+module.exports = MongoConnection;
