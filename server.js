@@ -18,6 +18,9 @@ app.use(cookieParser());
 app.use(cors());
 app.use("/public", express.static("public")); // serve static files in public subdirectory under /public virtual path
 app.use("/api", routes);
+app.get("/", function (req, res) {
+  return res.json({ status: res.status, message: "Welcome!" });
+});
 // Mongoose configuration and connection
 MongoConnection();
 // Server up and running

@@ -44,6 +44,23 @@ router.post("/products", async (req, res, err) => {
     res.status(500).json({ message: error.message });
   }
 });
+// ✅ PUT /products
+router.put("/products/:id", async (req, res, err) => {
+  try {
+    const { id } = req.params;
+    const { name } = req.params;
+
+    const product = await Product.findByIdAndUpdate(id, req.body);
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+    res.status(200).json({
+      message: `The sneaker: ${product.name} has been updated 🚀`,
+    });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
 
 // ✅ DELETE by ID Method
 router.delete("/products/:id", async (req, res, err) => {
