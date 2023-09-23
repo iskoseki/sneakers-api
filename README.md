@@ -1,11 +1,9 @@
-# Snk! The Free Sneakers collection RestFul API CRUD 
+# Snk! - Sneakers Collection - Restful CRUD API
 
 ## Install
-
 ```js
 npm install 
 ```
-
 ## Run development 
 ```js 
 npm run dev 
