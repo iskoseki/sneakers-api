@@ -33,7 +33,6 @@ router.get("/products/:id", async (req, res, err) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 // ✅ POST /products
 router.post("/products", async (req, res, err) => {
   try {
